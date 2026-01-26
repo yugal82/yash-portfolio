@@ -1,97 +1,91 @@
-import Image from 'next/image';
 import React from 'react'
 import ProjectCard from './ProjectCard';
 
 const projectsDetails = [
     {
-        name: "Electric Stadium",
-        image: "/images/projects/electric-stadium.webp",
-        demoLink: "",
-        githubLink: "https://github.com/yugal82/sports-screening-server",
-        skills: ["NodeJS", "ExpressJS", "Redis", "MongoDB", "ReactJs", "JWT Auth", "React Redux", "Postman", "Stripe"]
+        name: "Roku's Acquisition by Comcast",
+        company: "Roku & Comcast",
+        category: "M&A Analysis",
+        type: "Academic",
+        highlight: "$11 Bn Deal",
+        desc: "Proposed and led M&A analysis of Comcast's $11B acquisition of Roku, building complete financial model, DCF valuations, pro-forma financial statements and deal structure—ranked top 3 in cohort of 30+ students.",
+        tags: ["DCF", "Financial Modeling", "Pro-forma Statements"]
     },
     {
-        name: "YouTube Video Summarizer",
-        image: "/images/projects/youtube-llm.webp",
-        demoLink: "",
-        githubLink: "https://github.com/yugal82/GenAI/blob/master/Text%20Summarization/app.py",
-        skills: ["Python", "Langchain", "LLM", "Groq", "Gemma2b", "Text Summarization"]
+        name: "Tiffany's Acquisition by LVMH",
+        company: "Tiffany & LVMH",
+        category: "Investment Banking",
+        type: "Academic",
+        highlight: "Sell-Side Advisory",
+        desc: "Representing Tiffany as a sell-side investment banker and advising on the valuation and sale process to LVMH.",
+        tags: ["Sell-Side", "Valuation", "Deal Advisory"]
     },
     {
-        name: "Ecommerce App",
-        image: "/images/projects/ecommerce-app.webp",
-        demoLink: "https://fashionfusion-ui.vercel.app/",
-        githubLink: "https://github.com/yugal82/ecommerce-backend",
-        skills: ["ReactJs", "Redux", "NodeJS", "ExpressJS", "MongoDB", "PassportJS", "Tailwind CSS", "Postman", "Razorpay"]
+        name: "Microsoft Value Creation",
+        company: "Microsoft Inc.",
+        category: "Valuation",
+        type: "Consulting",
+        highlight: "Value Creation",
+        desc: "Consultants to the Microsoft Inc. management team in presenting them the value creation opportunities.",
+        tags: ["Value Creation", "Strategic Advisory", "Management Consulting"]
     },
     {
-        name: "New York Taxi Fare prediction",
-        image: "/images/projects/nyc-taxi.webp",
-        demoLink: "",
-        githubLink: "https://github.com/yugal82/Machine-Learning/blob/master/Projects/NYC_Taxi_fare_prediction.ipynb",
-        skills: ["Python", "Pandas", "Numpy", "Sklearn", "Fetaure Engineering", "Random Forest"]
+        name: "Investment Recommendation",
+        company: "Vistra Corp.",
+        category: "Equity Research",
+        type: "360 Huntington Fund",
+        highlight: "Buy Rating",
+        desc: "Buy recommendation of Vistra Corp. Prepared an investment thesis backed by strong quantitative financial and valuation model to present the investment idea.",
+        tags: ["Equity Research", "Investment Thesis", "Valuation"]
     },
     {
-        name: "Potato Disease Classification",
-        image: "/images/projects/potato-disease.webp",
-        demoLink: "",
-        githubLink: "https://github.com/yugal82/Deep-Learning/tree/master/Project/Potato-Disease",
-        skills: ["Python", "Pandas", "Numpy", "Tensorflow", "Keras", "CNN", "Matplotlib", "Deep learning"]
+        name: "Investment Recommendation",
+        company: "Walmart Inc.",
+        category: "Equity Research",
+        type: "360 Huntington Fund",
+        highlight: "Buy Rating",
+        desc: "Buy recommendation of Walmart. Prepared an investment thesis backed by strong quantitative financial and valuation model to present the investment idea.",
+        tags: ["Equity Research", "Investment Thesis", "Valuation"]
     },
     {
-        name: 'Medical AI - Dataset publication',
-        image: '/images/projects/dataset.webp',
-        demoLink: 'https://data.mendeley.com/datasets/ywnjr7gnty/1',
-        githubLink: '',
-        skills: ['Python', 'ML', 'Deep Learning', 'Computer Vision', 'Image registration', 'Data Preprocessing']
+        name: "Investment Recommendation",
+        company: "Nice Ltd.",
+        category: "Equity Research",
+        type: "360 Huntington Fund",
+        highlight: "Buy Rating",
+        desc: "Buy recommendation of Nice Ltd. Prepared an investment thesis backed by strong quantitative financial and valuation model to present the investment idea.",
+        tags: ["Equity Research", "Investment Thesis", "Valuation"]
     },
     {
-        name: 'Dekrypt',
-        image: '/images/projects/dekrypt.webp',
-        demoLink: 'https://dekrypt.vercel.app/',
-        githubLink: 'https://github.com/yugal82/BE-Project-Client',
-        skills: ['Javascript', 'Solidity', 'ReactJs', 'NodeJS', 'ExpressJS', 'MongoDB', 'Blockchain', 'Ethereum', 'ethers.js', 'TailwindCSS', 'Smart Contracts', 'Postman']
+        name: "Stock Valuation Analysis",
+        company: "ITC Limited",
+        category: "Stock Analysis",
+        type: "Personal",
+        highlight: "NSE: ITC",
+        desc: "Spent time valuing and analyzing ITC Ltd for academic and vocational basis to drive my personal investing decisions.",
+        tags: ["Fundamental Analysis", "Valuation", "Personal Investing"]
     },
     {
-        name: 'BookMyTour',
-        image: '/images/projects/bookmytour.webp',
-        demoLink: 'https://bookmytour.vercel.app/',
-        githubLink: 'https://github.com/yugal82/Natuors-MERN',
-        skills: ['NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'REST Api', 'JWT Token', 'Pug', 'Postman']
+        name: "Stock Valuation Analysis",
+        company: "Avenue Supermarts Ltd",
+        category: "Stock Analysis",
+        type: "Personal",
+        highlight: "NSE: DMART",
+        desc: "Spent time valuing and analyzing Avenue Supermarts Ltd for academic and vocational basis to drive my personal investing decisions.",
+        tags: ["Fundamental Analysis", "Valuation", "Personal Investing"]
     },
-    // {
-    //     name: 'House price prediction using ML',
-    //     image: '/images/projects/house-prediction.webp',
-    //     demoLink: '',
-    //     githubLink: 'https://github.com/yugal82/Machine-Learning/tree/master/Projects/Project-1',
-    //     skills: ['Python', 'ML', 'Regression', 'Pandas', 'Matplotlib', 'Scikit-Learn']
-    // },
-    {
-        name: 'Cryptopedia',
-        image: '/images/projects/cryptopedia.webp',
-        demoLink: 'https://cryptopeedia.netlify.app/',
-        githubLink: 'https://github.com/yugal82/Crypto-Currency-Tracker',
-        skills: ['Javascript', 'ReactJs', 'Material UI', 'CoinGecko API', 'Axios']
-    },
-    // {
-    //     name: 'Krypto Vault',
-    //     image: '/images/projects/krypto-vault.webp',
-    //     demoLink: '',
-    //     githubLink: 'https://github.com/yugal82/Blockchain-App',
-    //     skills: ['Javascript', 'Solidity', 'ReactJs', 'Blockchain', 'Ethereum', 'ethers.js', 'TailwindCSS', 'Smart Contracts']
-    // }
 ]
 
 const Projects = () => {
     return (
-        <div id='projects' className='container mx-auto px-12 py-4 mt-12'>
+        <div id='projects' className='container mx-auto px-4 md:px-12 py-4 mt-12 md:mt-24'>
             <div>
-                <h2 className='text-white text-center text-4xl font-bold'>Projects</h2>
+                <h2 className='text-white text-center text-4xl font-bold mb-10'>Projects</h2>
             </div>
-            <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
                     projectsDetails?.map((project, index) => (
-                        <ProjectCard key={index} project={project} skills={project.skills} />
+                        <ProjectCard key={index} project={project} />
                     ))
                 }
             </div>

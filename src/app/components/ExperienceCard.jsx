@@ -1,100 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Document = styled.img`
-    display: none;
-    height: 70px;
-    width: fit-content;
-    background-color: #000;
-    border-radius: 10px;
-    &:hover{
-        cursor: pointer;
-        opacity: 0.8;
-    }
-`
-
-const Description = styled.div`
-    width: 100%;
-    font-size: 15px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
-    margin-bottom: 10px;
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
-`
-
-const Span = styled.span`
-overflow: hidden;
-display: -webkit-box;
-max-width: 100%;
--webkit-line-clamp: 4;
--webkit-box-orient: vertical;
-text-overflow: ellipsis;
-`
-
 const Card = styled.div`
-    width: 650px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    padding: 12px 16px;
-    justify-content: space-between;
+    width: 100%;
+    border-radius: 12px;
+    padding: 18px 24px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     transition: all 0.3s ease-in-out;
+    background: #181818;
     &:hover{
         box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
         transform: translateY(-5px);
     }
     @media only screen and (max-width: 768px){
-        padding: 10px;
-        gap: 8px;
-        width: 300px;
+        padding: 14px 16px;
+        gap: 12px;
     }
-
-    &:hover ${Document}{
-        display: flex;
-    }
-
-    &:hover ${Span}{
-        overflow: visible;
-        -webkit-line-clamp: unset;
-
-    }
-
-    border: 0.1px solid #306EE8;
+    border: 1px solid #306EE8;
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
 
 const Top = styled.div`
     width: 100%;
     display: flex;
-    gap: 12px
+    flex-direction: column;
+    gap: 4px;
 `
-
-const Image = styled.img`
-    height: 50px;
-    background-color: #000;
-    border-radius: 10px;
-    margin-top: 4px;
-    @media only screen and (max-width: 768px){
-        height: 40px;
-    }
-`
-
-const Body = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-`
-
 
 const Role = styled.div`
     font-size: 18px;
     font-weight: 600;
+    color: #fff;
     @media only screen and (max-width: 768px){
         font-size: 14px;
     }
@@ -103,73 +43,107 @@ const Role = styled.div`
 const Company = styled.div`
     font-size: 14px;
     font-weight: 500;
+    color: #adb7b3;
     @media only screen and (max-width: 768px){
         font-size: 12px;
+    }
+`
+
+const MetaInfo = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+`
+
+const Location = styled.div`
+    font-size: 12px;
+    font-weight: 400;
+    color: #09A6F3;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    @media only screen and (max-width: 768px){
+        font-size: 10px;
     }
 `
 
 const Date = styled.div`
     font-size: 12px;
     font-weight: 400;
+    color: #adb7b3;
     @media only screen and (max-width: 768px){
         font-size: 10px;
     }
 `
 
+const Divider = styled.span`
+    color: #adb7b3;
+    font-size: 12px;
+`
 
-const Skills = styled.div`
+const PointsList = styled.ul`
     width: 100%;
+    padding-left: 8px;
+    margin: 0;
     display: flex;
-    gap: 12px;
-    margin-top: -10px;
-`
-
-const ItemWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 8px;
+    list-style: none;
 `
 
-const Skill = styled.div`
-    font-size: 15px;
+const Point = styled.li`
+    font-size: 13px;
     font-weight: 400;
+    color: #adb7b3;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    &::before {
+        content: '';
+        min-width: 6px;
+        height: 6px;
+        background: #09A6F3;
+        border-radius: 50%;
+        margin-top: 7px;
+    }
     @media only screen and (max-width: 768px){
         font-size: 12px;
+        gap: 10px;
+        &::before {
+            min-width: 5px;
+            height: 5px;
+            margin-top: 6px;
+        }
     }
 `
-
-
 
 const ExperienceCard = ({ experience }) => {
     return (
         <Card>
             <Top>
-                <Image alt='experience' src={experience.img} />
-                <Body>
-                    <Role>{experience.role}</Role>
-                    <Company>{experience.company}</Company>
+                <Role>{experience.role}</Role>
+                <Company>{experience.company}</Company>
+                <MetaInfo>
+                    <Location>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        {experience.location}
+                    </Location>
+                    <Divider>•</Divider>
                     <Date>{experience.date}</Date>
-                </Body>
+                </MetaInfo>
             </Top>
-            <Description>
-                {experience?.desc &&
-                    <Span>{experience?.desc}</Span>
-
-                }
-                {experience?.skills &&
-                    <>
-                        <br />
-                        <Skills>
-                            <b>Skills:</b>
-                            <ItemWrapper>
-                                {experience?.skills?.map((skill, index) => (
-                                    <Skill key={index}>• {skill}</Skill>
-                                ))}
-                            </ItemWrapper>
-                        </Skills>
-                    </>
-                }
-            </Description>
+            {experience?.points && experience.points.length > 0 && (
+                <PointsList>
+                    {experience.points.map((point, index) => (
+                        <Point key={index}>{point}</Point>
+                    ))}
+                </PointsList>
+            )}
         </Card>
     )
 }

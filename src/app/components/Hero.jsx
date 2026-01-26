@@ -6,22 +6,20 @@ import { TypeAnimation } from 'react-type-animation'
 
 const Hero = () => {
     return (
-        <div className='container mx-auto px-12 py-4 mt-28'>
-            <div className='grid grid-cols-1 sm:grid-cols-12'>
-                <div className='col-span-7 place-self-center text-center sm:text-left'>
+        <div id='home' className='container mx-auto px-4 md:px-12 py-4 mt-28'>
+            <div className='flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12'>
+                <div className='flex-1 text-center md:text-left'>
                     <h1 className='text-white text-4xl sm:text-5xl lg:text-6xl'>
-                        <span className='font-extrabold'>Hello, I am <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1]'>Yugal</span></span>
+                        <span className='font-extrabold'>Hi, I am <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1]'>Yash Khanter</span></span>
                         <p className='text-2xl font-bold md:text-5xl md:font-semibold py-3 md:py-6 text-transparent bg-clip-text bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1]'>
                         <span>I am </span>
                         <TypeAnimation
                             sequence={[
-                                'a Software Engineer',
+                                'an Investment Banker',
                                 1000,
-                                'an ML Engineer',
+                                'a stock investor and trader',
                                 1000,
-                                'an AI Enthusiast',
-                                1000,
-                                'a Web3 Developer',
+                                'a private capital and markets enthusiast',
                                 1000,
                             ]}
                             wrapper="span"
@@ -30,11 +28,19 @@ const Hero = () => {
                         />
                         </p>
                     </h1>
-                    <p className='text-[#adb7b3] text-base sm:text-lg lg:text-xl mb-6'>Currently based in <b>Los Angeles, CA, and pursuing a Master of Science in Computer Science at the University of Southern California</b>, I am passionate about software development and creating impactful, innovative technological solutions. With a strong foundation in machine learning, deep learning, and full-stack development, I am constantly learning, coding, and striving to push the boundaries of technology to build meaningful experiences.</p>
+                    <p className='text-[#adb7b3] text-base sm:text-lg lg:text-xl mb-6'>I am currently based in <b>Boston, MA and recently graduated with a Master of Science in Finance from Northeastern University.</b> With robust experience in investment banking and debt capital advisory, corporate development, and stock picking and investing, I have spent countless hours in honing my technical skills and understanding of the financial markets, private markets, and public markets across the globe. I am passionate about having a positive impact on as many businesses and individuals as I can in the realm of finance.</p>
                 </div>
-                <div className='col-span-5 place-self-center'>
-                    <div className='rounded-full p-2 bg-[#181818] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]'>
-                        <Image src='/images/Photo.webp' alt='hero-image' className='rounded-full' width={350} height={350} />
+                <div className='flex-shrink-0'>
+                    <div className='rounded-full p-[4px] bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1] w-[280px] h-[280px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]'>
+                        <div className='relative rounded-full w-full h-full bg-[#181818] overflow-hidden'>
+                            <Image 
+                                src='/images/Photo.webp' 
+                                alt='hero-image' 
+                                fill
+                                className='object-cover'
+                                sizes="(max-width: 768px) 280px, (max-width: 1024px) 350px, 400px"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <nav className='w-full flex items-center justify-between bg-[#121212] fixed top-0 left-0 right-0 z-10 bg-opacity-90 px-8' >
-            <div className='hidden md:flex text-xl font-semibold text-gray-400 hover:text-white transition-all duration-200 ease-in-out hover:scale-105 cursor-pointer'>~Yugal/Khanter~</div>
+            <div className='hidden md:flex text-xl font-semibold text-gray-400 hover:text-white transition-all duration-200 ease-in-out hover:scale-105 cursor-pointer'><Link href="#home">~Yash/Khanter~</Link></div>
             <div id='navbar' className='w-full px-12 py-6 hidden sm:flex items-center justify-end'>
                 <Link href='#about' className='text-lg font-semibold text-gray-400 hover:text-white transition-all duration-200 ease-in-out hover:scale-105 mx-3'>About</Link>
                 <Link href='#experience' className='text-lg font-semibold text-gray-400 hover:text-white transition-all duration-200 ease-in-out hover:scale-105 mx-3'>Experience</Link>

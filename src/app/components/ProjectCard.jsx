@@ -1,34 +1,66 @@
-import Image from 'next/image';
 import React from 'react'
 
-const ProjectCard = ({ project, skills }) => {
-    // console.log(skills);
+const ProjectCard = ({ project }) => {
     return (
-        <div className='cursor-pointer bg-[#383838] rounded-xl'>
-            <div className='relative w-full h-48 rounded-t-xl group' style={{ background: `url(${project?.image})`, backgroundPosition: 'center', backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
-                <div className='absolute w-full h-full top-0 left-0 bg-[#181818] bg-opacity-0 hidden group-hover:flex items-center justify-center group-hover:bg-opacity-80 transition-all duration-300 ease-in-out'>
-                    <div className='px-2 grid grid-cols-3 gap-x-3 gap-y-1'>
-                        {skills?.map((skill, index) => (
-                            <span key={index} className='text-sm text-center text-white font-semibold px-2 py-1 rounded-lg mr-1'>{skill}</span>
+        <div className='group bg-[#181818] rounded-xl border border-[#306EE8]/30 hover:border-[#09A6F3] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#09A6F3]/10 overflow-hidden h-full flex flex-col'>
+            {/* Header with gradient accent */}
+            <div className='relative px-5 pt-5 pb-4'>
+                {/* Category badge */}
+                <div className='flex items-center justify-between mb-3'>
+                    <span className='text-xs font-semibold px-3 py-1 rounded-full bg-gradient-to-r from-[#09A6F3]/20 to-[#0D41E1]/20 text-[#09A6F3] border border-[#09A6F3]/30'>
+                        {project?.category}
+                    </span>
+                    <span className='text-xs font-medium text-[#adb7b3] bg-[#282828] px-2 py-1 rounded'>
+                        {project?.type}
+                    </span>
+                </div>
+                
+                {/* Company name */}
+                <h3 className='text-xl font-bold text-white mb-1 group-hover:text-[#09A6F3] transition-colors duration-300'>
+                    {project?.company}
+                </h3>
+                
+                {/* Project name */}
+                <p className='text-sm text-[#adb7b3] font-medium'>
+                    {project?.name}
+                </p>
+                
+                {/* Highlight badge */}
+                {project?.highlight && (
+                    <div className='mt-3 inline-flex items-center gap-2'>
+                        <span className='w-2 h-2 rounded-full bg-[#09A6F3] animate-pulse'></span>
+                        <span className='text-sm font-semibold text-white'>
+                            {project?.highlight}
+                        </span>
+                    </div>
+                )}
+            </div>
+            
+            {/* Divider */}
+            <div className='mx-5 h-px bg-gradient-to-r from-transparent via-[#306EE8]/50 to-transparent'></div>
+            
+            {/* Description */}
+            <div className='px-5 py-4 flex-grow'>
+                <p className='text-sm text-[#adb7b3] leading-relaxed'>
+                    {project?.desc}
+                </p>
+            </div>
+            
+            {/* Tags */}
+            {project?.tags && project.tags.length > 0 && (
+                <div className='px-5 pb-5'>
+                    <div className='flex flex-wrap gap-2'>
+                        {project.tags.map((tag, index) => (
+                            <span 
+                                key={index} 
+                                className='text-xs px-2 py-1 rounded bg-[#282828] text-[#adb7b3] border border-[#383838] hover:border-[#09A6F3]/50 hover:text-white transition-colors duration-200'
+                            >
+                                {tag}
+                            </span>
                         ))}
                     </div>
                 </div>
-            </div>
-            <div className='py-3 px-4'>
-                <span className='block py-1 text-lg text-[#adb7b3] font-semibold'>{project?.name}</span>
-                <div className='text-[#adb7b3] mt-2'>
-                    {
-                        project?.githubLink && <a href={project?.githubLink} target='_blank' rel='noreferrer'>
-                            <span className='hover:text-white py-2 px-3 bg-[#282828] hover:bg-[#383838] cursor-pointer rounded-xl font-semibold mr-2'>Github</span>
-                        </a>
-                    }
-                    {
-                        project?.demoLink && <a href={project?.demoLink} target='_blank' rel='noreferrer'>
-                            <span className='hover:text-white py-2 px-3 bg-[#282828] hover:bg-[#383838] cursor-pointer rounded-xl font-semibold'>Live link</span>
-                        </a>
-                    }
-                </div>
-            </div>
+            )}
         </div>
     )
 }

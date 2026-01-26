@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
-import { FaLinkedin, FaXTwitter, FaGithub, FaInstagram } from "react-icons/fa6";
-import { SiLeetcode } from "react-icons/si";
+import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 
 const Contact = () => {
@@ -13,23 +12,14 @@ const Contact = () => {
             </div>
             <div className='w-full mx-auto mt-10'>
                 <div className='flex items-center justify-center'>
-                    <Link href='mailto:yugalkhanter82@gmail.com' target='_blank' rel='noreferrer'>
+                    <Link href='mailto:khanter.ya@northeastern.edu' target='_blank' rel='noreferrer'>
                         <TfiEmail className='w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out mx-2' />
                     </Link>
-                    <Link href='https://www.linkedin.com/in/yugalkhanter/' target='_blank' rel='noreferrer'>
+                    <Link href='https://www.linkedin.com/in/yash-khanter/' target='_blank' rel='noreferrer'>
                         <FaLinkedin className='w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out mx-2' />
                     </Link>
-                    <Link href='https://twitter.com/KhanterYugal' target='_blank' rel='noreferrer' >
+                    <Link href='https://twitter.com/yash_khanter' target='_blank' rel='noreferrer' >
                         <FaXTwitter className='w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out mx-2' />
-                    </Link>
-                    <Link href='https://github.com/yugal82' target='_blank' rel='noreferrer' >
-                        <FaGithub className='w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out mx-2' />
-                    </Link>
-                    <Link href='https://instagram.com/yugalkhanter' target='_blank' rel='noreferrer' >
-                        <FaInstagram className='w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out mx-2' />
-                    </Link>
-                    <Link href='https://leetcode.com/yugal82/' target='_blank' rel='noreferrer' >
-                        <SiLeetcode className='w-10 h-10 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out mx-2' />
                     </Link>
                 </div>
             </div>
