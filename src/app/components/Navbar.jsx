@@ -31,7 +31,7 @@ const Navbar = () => {
             </div>
             {
                 isMenuOpen && <div className='text-white mt-24 w-full h-screen'>
-                    <div className='text-4xl text-center mb-8 font-semibold transition-all duration-200 ease-in-out hover:scale-105 cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1]'>~Yugal/Khanter~</div>
+                    <div className='text-4xl text-center mb-8 font-semibold transition-all duration-200 ease-in-out hover:scale-105 cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1]'>~Yash/Khanter~</div>
                     <p className='text-4xl text-center py-4 font-semibold'><Link href='#about'>About</Link></p>
                     <p className='text-4xl text-center py-4 font-semibold'><Link href='#experience'>Experience</Link></p>
                     <p className='text-4xl text-center py-4 font-semibold'><Link href='#projects'>Projects</Link></p>
