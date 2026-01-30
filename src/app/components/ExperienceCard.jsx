@@ -83,40 +83,13 @@ const Divider = styled.span`
     font-size: 12px;
 `
 
-const PointsList = styled.ul`
-    width: 100%;
-    padding-left: 8px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    list-style: none;
-`
-
-const Point = styled.li`
-    font-size: 13px;
+const Description = styled.p`
+    font-size: 14px;
     font-weight: 400;
     color: #adb7b3;
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    &::before {
-        content: '';
-        min-width: 6px;
-        height: 6px;
-        background: #09A6F3;
-        border-radius: 50%;
-        margin-top: 7px;
-    }
+    line-height: 1.7;
     @media only screen and (max-width: 768px){
-        font-size: 12px;
-        gap: 10px;
-        &::before {
-            min-width: 5px;
-            height: 5px;
-            margin-top: 6px;
-        }
+        font-size: 13px;
     }
 `
 
@@ -137,12 +110,8 @@ const ExperienceCard = ({ experience }) => {
                     <Date>{experience.date}</Date>
                 </MetaInfo>
             </Top>
-            {experience?.points && experience.points.length > 0 && (
-                <PointsList>
-                    {experience.points.map((point, index) => (
-                        <Point key={index}>{point}</Point>
-                    ))}
-                </PointsList>
+            {experience?.desc && (
+                <Description>{experience.desc}</Description>
             )}
         </Card>
     )

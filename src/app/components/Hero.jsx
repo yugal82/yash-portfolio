@@ -28,7 +28,7 @@ const Hero = () => {
                         />
                         </p>
                     </h1>
-                    <p className='text-[#adb7b3] text-base sm:text-lg lg:text-xl mb-6'>I am currently based in <b>Boston, MA and recently graduated with a Master of Science in Finance from Northeastern University.</b> With robust experience in investment banking and debt capital advisory, corporate development, and stock picking and investing, I have spent countless hours in honing my technical skills and understanding of the financial markets, private markets, and public markets across the globe. I am passionate about having a positive impact on as many businesses and individuals as I can in the realm of finance.</p>
+                    <p className='text-[#adb7b3] text-base sm:text-lg lg:text-xl mb-6'><b>Currently based in Boston, MA, and a recent graduate with a Master of Science in Finance from Northeastern University</b>, I have extensive experience in investment banking, debt capital advisory, corporate development, and stock picking and investing. I have devoted countless hours to honing my technical skills and learning about the financial markets, encompassing both private and public markets worldwide. I am passionate about having a positive impact on as many businesses and individuals as I can in the realm of finance.</p>
                 </div>
                 <div className='flex-shrink-0'>
                     <div className='rounded-full p-[4px] bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1] w-[280px] h-[280px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]'>

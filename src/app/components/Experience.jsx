@@ -10,6 +10,7 @@ const experiences = [
         company: "360 Huntington Fund (Student led and managed university investment fund)",
         location: "Boston, MA",
         date: "May 2025 - Dec 2025",
+        desc: "As Sector Manager at 360 Huntington Fund, I led a team of 18 analysts through comprehensive equity research across Information Technology and Healthcare sectors, generating 9 buy recommendations that achieved a 60% investment committee approval rate. Under my oversight, the $2M+ student-run portfolio consistently outperformed the Russell 3000 by approximately 6% through disciplined sector analysis and rigorous evaluation of market trends.",
         points: [
             "Managed a $2M+ student-run investment fund that consistently generated an alpha of ~6% over the Russell 3000 (RUA)",
             "Monitored market trends and various developments across industries like Information Technology and Healthcare",
@@ -22,6 +23,7 @@ const experiences = [
         company: "NeuroSync, Inc. (Health-tech startup solving neurodegenerative disorder problems)",
         location: "Boston, MA",
         date: "May 2025 - Aug 2025",
+        desc: "Collaborated with the Finance & Corporate Development team in the process of raising a $7.5 mn series A/B funding round. Additionally, screened and sourced potential M&A targets for acquisition and corporate development, carried out valuation analysis, and supported internal strategic-decision making.",
         points: [
             "Oversaw financial due diligence and valuation analysis on 2 med-tech acquisition targets that supported strategic decision-making and corporate development",
             "Sourced 50+ potential acquisition targets using sources like PitchBook and Crunchbase, advancing 8 for executive review",
@@ -36,6 +38,7 @@ const experiences = [
         company: "360 Huntington Fund (Student led and managed university investment fund)",
         location: "Boston, MA",
         date: "Sep 2024 - May 2025",
+        desc: "As a Senior Investment Analyst at 360 Huntington Fund, I delivered detailed equity research reports on 4 companies across multiple sectors, with 2 achieving unanimous buy votes from the investment committee. I built comprehensive 3-statement financial models, DCF analyses, and comparable company valuations using Bloomberg, FactSet, and Pitchbook to drive investment decisions and produce high-quality research deliverables.",
         points: [
             "Presented detailed equity research report of 4 companies across sectors, 2 of which received 100% buy votes from the IC",
             "Prepared 3-statement models, DCF, Comparable Comps, etc., that drove valuation analyses and investment decisions",
@@ -48,6 +51,7 @@ const experiences = [
         company: "Prachay Capital Limited (An investment bank focused on real estate DCM and financing advisory)",
         location: "Pune, India",
         date: "Sep 2023 - Aug 2024",
+        desc: "Worked on multiple private credit and debt advisory transactions/deals, complemented by end-to-end due diligence processes, and managed client relations. Additionally, led industry-wide research across multiple industries. Participated in other due-diligence, valuation & operational analysis, and fund-raising efforts.",
         points: [
             "Executed credit analysis and due diligence processes resulting in closure of 6 real estate debt transactions totaling $35M",
             "Conducted comps analysis of the top 100 financial institutions, resulting in a comprehensive evaluation of PCL's 15+ performance and valuation metrics",
@@ -61,6 +65,7 @@ const experiences = [
         company: "Prachay Capital Limited (An investment bank focused on real estate DCM and financing advisory)",
         location: "Pune, India",
         date: "Apr 2023 - Jul 2023",
+        desc: "Conducted research and developed financial models to track KPIs of ~100 companies in the Financial sector for internal evaluation. Created CIMs and pitch decks for the investment committee and investors, presenting key data and potential investment opportunities.",
         points: [
             "Directed market research on private debt opportunities across 3 industries, contributing to 16% growth in capital raising",
             "Constructed financial models tracking 15+ KPIs that supported in producing credit and investor decks for annual reporting",
