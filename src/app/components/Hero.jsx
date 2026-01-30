@@ -37,18 +37,18 @@ const Hero = () => {
                                 src='/images/Photo.webp' 
                                 alt='hero-image' 
                                 fill
-                                className='object-cover'
+                                className='object-cover scale-125'
                                 sizes="(max-width: 768px) 280px, (max-width: 1024px) 350px, 400px"
                             />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className=''>
+            {/* <div className=''>
                 <button className='px-6 py-3 w-full sm:w-fit rounded-full mt-6 md:mt-0 bg-white hover:bg-slate-200 text-white font-semibold bg-gradient-to-r from-[#09A6F3] via-[#0B74EA] to-[#0D41E1]'>
                     <Link href='https://docs.google.com/document/d/1VZtQIY1TUO5YiXciDyk5j1440NscpXTJ/edit?usp=sharing&ouid=113078072215240214886&rtpof=true&sd=true' target='_blank' rel='noreferrer'>Download Resume</Link>
                 </button>
-            </div>
+            </div> */}
         </div>
     )
 }
