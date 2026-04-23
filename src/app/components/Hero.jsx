@@ -17,9 +17,9 @@ const Hero = () => {
                             sequence={[
                                 'an Investment Banker',
                                 1000,
-                                'a stock investor and trader',
+                                'an Investor',
                                 1000,
-                                'a private capital and markets enthusiast',
+                                'a Private Capital Markets Enthusiast',
                                 1000,
                             ]}
                             wrapper="span"

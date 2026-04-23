@@ -6,6 +6,18 @@ import ExperienceCard from './ExperienceCard';
 const experiences = [
     {
         id: 0,
+        role: "Investment Banking Analyst",
+        company: "Young America Capital, LLC. (Investment bank specializing in MM capital raise and M&A)",
+        location: "Remote, USA",
+        date: "Feb 2026 - Present",
+        desc: "I help early and late-stage startups in raising equity and debt capital to support their growth plans. Additionally, I assist the deal teams in facilitating and representing sell-side M&A cross-border transactions. Major responsibilities include: financial modeling and valuation analysis, pitch deck & marketing materials creation, and curating a targeted buyers list to take the deals to market.",
+        points: [
+            "Carveout/Sale of a subsidiary providing Voice-to-CRM technology services in the global markets.",
+            "Series A equity capital raise for an international business management & marketing software company.",
+        ], 
+    },
+    {
+        id: 0,
         role: "Sector Manager",
         company: "360 Huntington Fund (Student led and managed university investment fund)",
         location: "Boston, MA",
